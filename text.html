@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    canvas {
+      border: 1px solid #000;
+      /* Optional: Add a border to the canvas for better visibility */
+    }
+  </style>
+  <title>Curved Text</title>
+  <!--Style to transform text in an arc -->
+  <style type=text/css>
+    /* Apply the translate and rotate transformation 
+           for our text to look curved  */
+
+    .G1 {
+      transform: translate(20px, 85px) rotate(-30deg);
+    }
+
+    .e1 {
+      transform: translate(13px, 60px) rotate(-25deg);
+    }
+
+    .e2 {
+      transform: translate(6px, 40px) rotate(-20deg);
+    }
+
+    .k1 {
+      transform: translate(3px, 23px) rotate(-15deg);
+    }
+
+    .s1 {
+      transform: translate(2px, 14px) rotate(-10deg);
+    }
+
+    .f {
+      transform: translate(1px, 8px) rotate(-5deg);
+    }
+
+    .o {
+      transform: translate(0px, 5px) rotate(0deg);
+    }
+
+    .r {
+      transform: translate(-1px, 8px) rotate(5deg);
+    }
+
+    .G2 {
+      transform: translate(-2px, 14px) rotate(10deg);
+    }
+
+    .e3 {
+      transform: translate(-3px, 25px) rotate(15deg);
+    }
+
+    .e4 {
+      transform: translate(-6px, 40px) rotate(20deg);
+    }
+
+    .k2 {
+      transform: translate(-14px, 60px) rotate(25deg);
+    }
+
+    .s2 {
+      transform: translate(-20px, 80px) rotate(30deg);
+    }
+
+    /* An inline-block element is placed as an inline 
+         element (on the same line as adjacent content),  
+         but it behaves like a block element  */
+
+    span {
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="text-align: center; padding-top: 250px; 
+                font-size: 55px; color: green;">
+
+    <!-- Declare all the characters of text  
+            one-by-one, inside span tags -->
+    <span class="G1">G</span>
+    <span class="e1">e</span>
+    <span class="e2">e</span>
+    <span class="k1">k</span>
+    <span class="s1">s</span>
+    <span class="f">f</span>
+    <span class="o">o</span>
+    <span class="r">r</span>
+    <span class="G2">G</span>
+    <span class="e3">e</span>
+    <span class="e4">e</span>
+    <span class="k2">k</span>
+    <span class="s2">s</span>
+  </div>
+</body>
+
+</html>

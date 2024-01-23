@@ -10,7 +10,7 @@ body {
   flex-direction: column;
 }
 
-h1 {
+span {
   display: flex;
   font-size: 56px;
   font-weight: bold;
@@ -40,7 +40,7 @@ button {
 
 .header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .container {
