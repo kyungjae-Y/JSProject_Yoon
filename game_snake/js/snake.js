@@ -8,8 +8,8 @@ let direction; // 0 1 2 3 상 하 좌 우
 let speed;
 let snakeQueue = new Array();
 let snakeColor = "#ED5B5B",
-  tileColor = "#EEEEEE"
-wallColor = "#2E2E2E",
+  tileColor = "#EEEEEE",
+  wallColor = "#2E2E2E",
   coinColor = "#4476C6";
 
 init();
@@ -63,7 +63,6 @@ function drawWall() {
     let wx = wallCell[i][1];
     document.getElementById(String(wy) + " " + String(wx)).style.background = wallColor;
     document.getElementById(String(wy) + " " + String(wx)).style.borderRadius = "1.5px";
-
   }
 }
 
