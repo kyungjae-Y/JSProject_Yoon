@@ -1,6 +1,8 @@
 let copyright = "감사합니다";
 let H = 34,
   W = 20; // field size
+
+// 블럭 모양
 let shapeArray = [
   [
     [2, 2],
@@ -117,7 +119,9 @@ let shapeArray = [
     [0, 0]
   ]
 ];
+// 모양 변경
 let shapeRotateMap = [1, 0, 3, 2, 4, 6, 7, 8, 5, 10, 9, 12, 13, 14, 11, 16, 17, 18, 15];
+// 블럭 색깔
 let shapeColorArray = [
   "rgb(199,82,82)",
   "rgb(233,174,43)",
@@ -204,6 +208,7 @@ function initExistField() {
       existField[i][j] = false;
 }
 
+// 필드 만들기
 function drawField() {
   let fieldTag = "<table id=\"gameTable\" border=0>";
   for (let i = 0; i < H; i++) {
@@ -215,6 +220,7 @@ function drawField() {
   document.write(fieldTag);
 }
 
+// 벽 생성
 function setWall() {
   for (let i = 0; i < H; i++) {
     gebi(i, 0).style.background = wallColor;
