@@ -51,7 +51,11 @@ button {
   justify-content: center;
 }
 
-.footer {
-  display: flex;
-  justify-content: end;
+.end {
+  width: 100px;
+  height: 100px;
+  font-size: 12px;
+  background-color: aqua;
+  margin-top: 5px;
+  margin-bottom: 0;
 }
