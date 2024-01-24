@@ -1,4 +1,5 @@
 (() => {
+  // matter.js 에 필요한 필수요소
   const Engine = Matter.Engine,
     Render = Matter.Render,
     World = Matter.World,
@@ -45,6 +46,7 @@
     mask: -2,
   };
 
+  // 지면
   const ground = Bodies.rectangle(400, 1220, 810, 1000, {
     isStatic: true,
     render: {
@@ -52,6 +54,7 @@
     },
   });
 
+  // 왼쪽 벽
   const wallLeft = Bodies.rectangle(-50, 500, 100, 1000, {
     isStatic: true,
     render: {
@@ -59,6 +62,7 @@
     },
   });
 
+  // 오른쪽 벽
   const wallRight = Bodies.rectangle(530, 500, 100, 1000, {
     isStatic: true,
     render: {
@@ -330,7 +334,9 @@
     });
     c.size = size;
     c.createdAt = Date.now();
+    // 복원력, 탄성
     c.restitution = 0.3;
+    // 마찰
     c.friction = 0.1;
     return c;
   }
