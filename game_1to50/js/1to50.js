@@ -5,6 +5,7 @@ class App {
     this.DOM.startBtn = document.querySelector("#start-btn");
     this.DOM.board = document.querySelector(".board");
     this.DOM.timer = document.querySelector(".time");
+    this.DOM.endBtn = document.querySelector("#end-btn")
     this.blocks = [];
   }
 
@@ -15,6 +16,7 @@ class App {
       }
       this.game.start();
       this.DOM.startBtn.style.display = 'none';
+      this.DOM.endBtn.style.display = 'block';
     });
   }
 
