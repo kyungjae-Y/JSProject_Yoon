@@ -230,10 +230,11 @@ function gameDraw() {
 }
 
 function gameLoop() {
+  // 잔상
+  // rgba(red, green, blue, 투명도)
   ctx.fillStyle = 'rgba(0,0,0,0.2)';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  window.requestAnimationFrame(gameLoop);
-
+  window.requestAnimationFrame(gameLoop)
   gameUpdate();
   gameDraw();
 }
