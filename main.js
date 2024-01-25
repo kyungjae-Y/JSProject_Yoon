@@ -2,7 +2,6 @@ let button1 = document.querySelector('#to50')
 let button2 = document.querySelector('#snake')
 let button3 = document.querySelector('#tetris')
 let button4 = document.querySelector('#two')
-let button5 = document.querySelector('#wm')
 let button6 = document.querySelector('#pp')
 let button7 = document.querySelector('.end')
 let opendWindow;
@@ -25,11 +24,6 @@ button3.addEventListener('click', () => {
 button4.addEventListener('click', () => {
   // window.location.href = './game_2048/2048.html';
   opendWindow = window.open('./game_2048/2048.html')
-})
-
-button5.addEventListener('click', () => {
-  // window.location.href = './game_watermelon/watermelon.html';
-  opendWindow = window.open('./game_watermelon/watermelon.html')
 })
 
 button6.addEventListener('click', () => {
