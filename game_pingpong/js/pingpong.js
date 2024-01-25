@@ -18,6 +18,12 @@ window.addEventListener('keyup', function (e) {
   keysPressed[e.keyCode] = false;
 })
 
+// 마우스 올렸을 때 내 스틱 움직임 (y 좌표만)
+window.addEventListener('mousemove', function (e) {
+  paddle1.pos.y = e.clientY;
+  paddle1.style.left = `${y}px`
+})
+
 function vec2(x, y) {
   return {
     x: x,
@@ -25,15 +31,21 @@ function vec2(x, y) {
   };
 }
 
+
+// 공
 function Ball(pos, velocity, radius) {
+  // 포지션
   this.pos = pos;
+  // 속도
   this.velocity = velocity;
+  // 둥글기
   this.radius = radius;
 
   this.update = function () {
     this.pos.x += this.velocity.x;
     this.pos.y += this.velocity.y;
   };
+  // 공 그리기
   this.draw = function () {
     ctx.fillStyle = '#33ff00';
     ctx.strokeStyle = '#33ff00';
@@ -44,11 +56,17 @@ function Ball(pos, velocity, radius) {
   }
 }
 
+// 스틱
 function Paddle(pos, velocity, width, height) {
+  // 포지션
   this.pos = pos;
+  // 속도
   this.velocity = velocity;
+  // 길이
   this.width = width;
+  // 너비
   this.height = height;
+  // 점수
   this.score = 0;
 
   this.update = function () {
@@ -59,6 +77,7 @@ function Paddle(pos, velocity, width, height) {
       this.pos.y += this.velocity.y;
     }
   }
+  // 그리기
   this.draw = function () {
     ctx.fillStyle = '#33ff00';
     ctx.fillRect(this.pos.x, this.pos.y, this.width, this.height);
@@ -145,6 +164,14 @@ function respawnBall(ball) {
 
 // 점수
 function increaseScore(ball, paddle1, paddle2) {
+  if (paddle1.score >= 10) {
+    alert('게임 승리 !')
+    window.close();
+  }
+  if (paddle2.score >= 10) {
+    alert('게임 패배 !')
+    window.close();
+  }
   if (ball.pos.x <= -ball.radius) {
     paddle2.score++;
     document.getElementById('player2Score').innerHTML = paddle2.score;
