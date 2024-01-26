@@ -137,7 +137,6 @@ window.onkeydown = (event) => {
         addCurrentFruit();
         disableAction = false;
       }, 1000);
-      count++;
       break;
   }
 };
@@ -159,6 +158,10 @@ Events.on(engine, "collisionStart", (event) => {
     if (collision.bodyA.name === collision.bodyB.name) {
       // 과일을 제거하고
       World.remove(world, [collision.bodyA, collision.bodyB]);
+      // 합쳐질 때 소리
+      let audio = new Audio("./public/pop.wav");
+      // 재생
+      audio.play();
       const index = FRUITS.findIndex(
         (fruit) => fruit.name === collision.bodyA.name
       );
