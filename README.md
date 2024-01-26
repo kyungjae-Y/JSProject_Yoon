@@ -1,3 +1,5 @@
+# ※ 주의 - 제 게임에는 소리가 포함되어 있습니다.
+
 # 작전명 : 미니게임천국
 
 ## 프로젝트
@@ -24,6 +26,12 @@
 8. 01.26 - 지뢰찾기, 순서도
 9. 01.27, 01.28 - 반응형 웹페이지(최대한)
 ```
+## 순서도
+<img width="615" alt="1to50" src="https://github.com/kyungjae-Y/JSProject_Yoon/assets/153978815/a0925b7b-7774-44db-9811-971c16116c10">
+<img width="611" alt="테트리스" src="https://github.com/kyungjae-Y/JSProject_Yoon/assets/153978815/62d6e60d-4d43-44b5-9518-df9192842c3e">
+<img width="605" alt="지뢰찾기" src="https://github.com/kyungjae-Y/JSProject_Yoon/assets/153978815/33ef39a2-c3a3-444a-901d-52971a2b03a1">
+<img width="604" alt="핑퐁" src="https://github.com/kyungjae-Y/JSProject_Yoon/assets/153978815/0a25814e-07c7-4fd4-9e8a-154ee251c752">
+<img width="608" alt="수박게임" src="https://github.com/kyungjae-Y/JSProject_Yoon/assets/153978815/67dc365c-2cb0-4bb7-a5db-0f1ebdb5c47f">
 
 ## 디자인
 ```
