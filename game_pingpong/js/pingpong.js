@@ -31,7 +31,6 @@ function vec2(x, y) {
   };
 }
 
-
 // 공
 function Ball(pos, velocity, radius) {
   // 포지션
