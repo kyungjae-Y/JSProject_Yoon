@@ -103,10 +103,6 @@ function getRandomFruit() {
   return fruit;
 }
 
-window.addEventListener('mousemove', function (e) {
-
-})
-
 // 움직이는 키
 window.onkeydown = (event) => {
   if (disableAction) return;
