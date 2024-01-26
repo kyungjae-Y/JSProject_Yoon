@@ -15,6 +15,7 @@ span {
   font-size: 56px;
   font-weight: bold;
   text-shadow: 6px 2px 2px gray;
+  align-self: center;
 }
 
 p {
@@ -38,9 +39,26 @@ button {
   background-color: pink;
 }
 
+#btnPlay {
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  border: none;
+  display: flex;
+  background-color: #222;
+}
+
+#btnPause {
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  border: none;
+  display: flex;
+  background-color: #222;
+}
+
 .header {
   display: flex;
-  flex-direction: row;
 }
 
 .container {
