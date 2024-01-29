@@ -211,10 +211,10 @@ function showMines() {
   });
 }
 
-function onLeftClick(event) {
-  const target = event.target;
-  const rowIndex = target.parentNode.rowIndex;
-  const cellIndex = target.cellIndex;
+function onLeftClick(e) {
+  let target = e.target;
+  let rowIndex = target.parentNode.rowIndex;
+  let cellIndex = target.cellIndex;
   let cellData = data[rowIndex][cellIndex];
   if (firstClick) {
     firstClick = false;
@@ -231,11 +231,15 @@ function onLeftClick(event) {
     openAround(rowIndex, cellIndex);
   } else if (cellData === CODE.MINE) {
     showMines();
-    target.textContent('펑');
+    target.textContent = '펑';
     target.className = 'opened';
     clearInterval(interval);
     tbody.removeEventListener('contextmenu', onRightClick);
     tbody.removeEventListener('click', onLeftClick);
+    setTimeout(() => {
+      alert('게임 패배 ㅠㅠ')
+      window.close();
+    }, 100);
   }
 }
 
