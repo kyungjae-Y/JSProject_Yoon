@@ -1,5 +1,5 @@
 * {
-  background-color: #222;
+  background-color: black;
 }
 
 body {
@@ -54,7 +54,7 @@ button {
   color: #fff;
   border: none;
   display: flex;
-  background-color: #222;
+  background-color: black;
 }
 
 #btnPause {
@@ -63,7 +63,7 @@ button {
   color: #fff;
   border: none;
   display: flex;
-  background-color: #222;
+  background-color: black;
 }
 
 .header {
