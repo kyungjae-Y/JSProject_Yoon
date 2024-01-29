@@ -5,6 +5,7 @@ const result = document.querySelector('#result');
 let row;
 let cell;
 let mine;
+
 const CODE = {
   NORMAL: -1,
   QUESTION: -2,
@@ -65,6 +66,7 @@ function plantMine() {
   return data;
 }
 
+// 우클릭 이벤트
 function onRightClick(event) {
   event.preventDefault();
   const target = event.target;
@@ -113,6 +115,8 @@ function onRightClick(event) {
 // 4 5 6
 // 7 8 9
 
+
+// 지뢰 세기
 function countMine(rowIndex, cellIndex) {
   const mines = [CODE.MINE, CODE.QUESTION_MINE, CODE.FLAG_MINE];
   let i = 0;
@@ -200,6 +204,7 @@ function transferMine(rI, cI) {
   }
 }
 
+// 폭탄 보여주기
 function showMines() {
   const mines = [CODE.MINE, CODE.QUESTION_MINE, CODE.FLAG_MINE];
   data.forEach((row, rowIndex) => {
@@ -211,6 +216,7 @@ function showMines() {
   });
 }
 
+// 좌클릭 이벤트
 function onLeftClick(e) {
   let target = e.target;
   let rowIndex = target.parentNode.rowIndex;
@@ -247,6 +253,7 @@ function onLeftClick(e) {
   }
 }
 
+// 테이블 그리기
 function drawTable() {
   data = plantMine();
   data.forEach((row) => {
