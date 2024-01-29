@@ -11,8 +11,9 @@ body {
 }
 
 .header {
-  width: 800px;
-  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 span {
