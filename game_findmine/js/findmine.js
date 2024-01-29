@@ -230,6 +230,10 @@ function onLeftClick(e) {
   if (cellData === CODE.NORMAL) {
     openAround(rowIndex, cellIndex);
   } else if (cellData === CODE.MINE) {
+    // 터지는 소리
+    let audio = new Audio("../../펑💥효과음.mp3");
+    // 재생
+    audio.play();
     showMines();
     target.textContent = '펑';
     target.className = 'opened';
