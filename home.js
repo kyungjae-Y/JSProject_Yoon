@@ -8,7 +8,7 @@ let button1 = document.querySelector('#to50')
 let button3 = document.querySelector('#tetris')
 let button4 = document.querySelector('#fm')
 let button6 = document.querySelector('#pp')
-let button7 = document.querySelector('.git')
+let button7 = document.querySelector('#git')
 let opendWindow;
 
 btnPlay.onclick = function () {
