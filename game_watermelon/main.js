@@ -191,7 +191,7 @@ Events.on(engine, "collisionStart", (event) => {
     ) {
       // alert 창 띄우고 메인 페이지 이동
       alert("Game over");
-      location.href = "http://127.0.0.1:5500/home.html";
+      location.href = "http://127.0.0.1:5500/index.html";
     }
   });
 });
