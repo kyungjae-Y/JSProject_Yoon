@@ -8,7 +8,7 @@ let button1 = document.querySelector('#to50')
 let button3 = document.querySelector('#tetris')
 let button4 = document.querySelector('#fm')
 let button6 = document.querySelector('#pp')
-let button7 = document.querySelector('.end')
+let button7 = document.querySelector('.git')
 let opendWindow;
 
 btnPlay.onclick = function () {
@@ -40,9 +40,5 @@ button6.addEventListener('click', () => {
 })
 
 button7.addEventListener('click', () => {
-  if (confirm('정말 그만하실건가요 ?') == true) {
-    window.close();
-  } else {
-    return;
-  }
+  opendWindow = window.open('https://github.com/kyungjae-Y/JSProject_Yoon')
 })
