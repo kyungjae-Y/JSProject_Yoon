@@ -31,7 +31,7 @@ function vec2(x, y) {
   };
 }
 
-// 공
+// 공에 대한 함수
 function Ball(pos, velocity, radius) {
   // 포지션
   this.pos = pos;
@@ -39,7 +39,7 @@ function Ball(pos, velocity, radius) {
   this.velocity = velocity;
   // 둥글기
   this.radius = radius;
-
+  // 포지션에 따라 속도가 달라진다
   this.update = function () {
     this.pos.x += this.velocity.x;
     this.pos.y += this.velocity.y;
@@ -55,7 +55,7 @@ function Ball(pos, velocity, radius) {
   }
 }
 
-// 스틱
+// 스틱에 대한 함수
 function Paddle(pos, velocity, width, height) {
   // 포지션
   this.pos = pos;
@@ -132,12 +132,14 @@ function ballPaddleCollision(ball, paddle) {
 // 컴퓨터랑 이동 조건
 function player2AI(ball, paddle) {
   if (ball.velocity.x > 0) {
+    // 공의 y 좌표가 스틱의 y 좌표보다 크다면
     if (ball.pos.y > paddle.pos.y) {
       paddle.pos.y += paddle.velocity.y;
       if (paddle.pos.y + paddle.height >= canvas.height) {
         paddle.pos.y = canvas.height - paddle.height;
       }
     }
+    // 공의 y 좌표가 스틱의 y 좌표보다 작다면
     if (ball.pos.y < paddle.pos.y) {
       paddle.pos.y -= paddle.velocity.y;
       if (paddle.pos.y <= 0) {
