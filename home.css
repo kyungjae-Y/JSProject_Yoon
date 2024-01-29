@@ -10,6 +10,11 @@ body {
   flex-direction: column;
 }
 
+.header {
+  width: 800px;
+  justify-content: space-between;
+}
+
 span {
   display: flex;
   font-size: 56px;
