@@ -69,10 +69,10 @@ button {
   justify-content: center;
 }
 
-.end {
+.git {
   width: 100px;
   height: 100px;
-  font-size: 12px;
+  font-size: 15px;
   background-color: aqua;
   margin-top: 5px;
   margin-bottom: 0;
