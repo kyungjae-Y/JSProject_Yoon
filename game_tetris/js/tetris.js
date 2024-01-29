@@ -246,6 +246,7 @@ function chooseNextColor() {
     nextColorIndex = 0;
 }
 
+// 모양 만들기
 function createShape() {
   shapePoint[0] = createPoint[0];
   shapePoint[1] = createPoint[1];
@@ -269,6 +270,8 @@ function createShape() {
   movingThread = setTimeout("moveDown()", movingSpeed);
 }
 
+
+// 다음 블럭 모양 보여주기
 function displayNextShape() {
   initNextTable();
   let shape = shapeArray[nextShape];
@@ -302,6 +305,7 @@ function moveDown() {
   movingThread = setTimeout("moveDown()", movingSpeed);
 }
 
+// 블럭 위치
 function rotateShape() {
   if (!canRotate()) return;
   removeShape();
@@ -330,6 +334,7 @@ function isValidPoint(y, x) {
   return !(y <= 0 || y >= H - 1 || x <= 0 || x >= W - 1 || existField[y][x]);
 }
 
+// 모양 없애기
 function removeShape() {
   for (let i = 0; i < shapeCell.length; i++) {
     let el = gebi(shapeCell[i][0], shapeCell[i][1]);
@@ -337,6 +342,7 @@ function removeShape() {
   }
 }
 
+// 모양 보여주기
 function showShape() {
   for (let i = 0; i < shapeCell.length; i++) {
     let el = gebi(shapeCell[i][0], shapeCell[i][1]);
@@ -406,6 +412,7 @@ function isFull(lineIndex) {
   return true;
 }
 
+// 라인 지우기
 function removeLine(lineIndex) {
   for (let i = lineIndex - 1; i >= 1; i--) {
     for (let j = 1; j < W - 1; j++) {
@@ -415,6 +422,7 @@ function removeLine(lineIndex) {
   }
 }
 
+// 레벨
 function leveling() {
   if (level == 10) return;
   if (levelStack == level * 10) {
@@ -426,6 +434,7 @@ function leveling() {
   document.getElementById("level").innerHTML = level;
 }
 
+// 점수 업데이트
 function updateScore(plusScore, combo) {
   let comboScore = plusScore * combo;
   score += comboScore;
@@ -433,6 +442,7 @@ function updateScore(plusScore, combo) {
   return comboScore;
 }
 
+// 콤보 보여주기
 function displayCombo(combo, finalScore) {
   let comboStr = combo + " COMBO +" + finalScore;
   document.getElementById("comboField").innerHTML = comboStr;
